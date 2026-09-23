@@ -80,5 +80,13 @@ Guía paso a paso del desarrollo del proyecto para el módulo **Programación Or
 
 ### Paso 12: Herencia - Subclases `Auto`, `Moto` y `Camion`
 - Creación de los módulos `auto.py`, `moto.py` y `camion.py`.
-- Definición de las subclases `Auto`, `Moto` y `Camion` heredando de `Vehiculo` (`class NombreClase(Vehiculo): pass`).
-- Actualización de `main.py` importando e instanciando las tres subclases para comprobar la herencia.
+- Definición de las subclases `Auto`, `Moto` y `Camion` heredando de `Vehiculo`.
+
+---
+
+### Paso 13: Constructor Propio y Atributo Privado `capacidad_carga` en `Camion`
+- Creación del constructor propio `__init__(self, patente, anio, capacidad_carga)` en `Camion`.
+- Invocación al constructor de la superclase mediante `super().__init__(patente, anio)`.
+- Asignación del atributo privado `__capacidad_carga`.
+- Creación de la propiedad getter `@property capacidad_carga`.
+- Modificación de `main.py` probando la instanciación de `Camion` con 3 argumentos.
