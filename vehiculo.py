@@ -39,3 +39,8 @@ class Vehiculo:
     def entregar(self) -> None:
         # Cambia el estado del atributo privado __en_taller a False
         self.__en_taller = False
+
+    # Método que retorna el valor de la tarifa por hora de reparación para el vehículo
+    def tarifa_hora(self) -> int:
+        # Retorna el entero 5000 correspondiente a la tarifa por hora de reparación
+        return 5000
