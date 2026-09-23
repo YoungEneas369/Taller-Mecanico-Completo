@@ -43,12 +43,20 @@ class Vehiculo:
 
     # Método público para registrar el ingreso del vehículo al taller
     def ingresar(self) -> None:
-        # Modifica directamente el atributo privado __en_taller a True dentro de la clase
+        # Valida si el vehículo ya se encuentra actualmente dentro del taller
+        if self.__en_taller:
+            # Lanza un error ValueError si se intenta ingresar un vehículo que ya está en el taller
+            raise ValueError("El vehículo ya se encuentra en el taller.")
+        # Modifica directamente el atributo privado __en_taller a True si no estaba en el taller
         self.__en_taller = True
 
     # Método público para registrar la entrega del vehículo saliendo del taller
     def entregar(self) -> None:
-        # Modifica directamente el atributo privado __en_taller a False dentro de la clase
+        # Valida si el vehículo NO se encuentra actualmente dentro del taller
+        if not self.__en_taller:
+            # Lanza un error ValueError si se intenta entregar un vehículo que no está en el taller
+            raise ValueError("El vehículo no está en el taller.")
+        # Modifica directamente el atributo privado __en_taller a False si estaba en el taller
         self.__en_taller = False
 
     # Método que retorna el valor de la tarifa por hora de reparación básica
