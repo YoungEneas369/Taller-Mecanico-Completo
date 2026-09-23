@@ -112,3 +112,10 @@ Guía paso a paso del desarrollo del proyecto para el módulo **Programación Or
 ### Paso 16: Prueba de la Validación en `main.py` (sin manejo de excepciones)
 - Inserción en `main.py` de la instanciación `Auto('ABC', 2020)` con una patente de menos de 6 dígitos.
 - Verificación de la interrupción del programa en tiempo de ejecución al activarse la validación del setter.
+
+---
+
+### Paso 17: Propiedad de Solo Lectura `en_taller` en `Vehiculo`
+- Reafirmación del decorador `@property` para `en_taller` como propiedad de solo lectura.
+- Exclusión explícita de cualquier método setter `@en_taller.setter` para evitar modificaciones directas externas.
+- Modificación directa del atributo privado `self.__en_taller` únicamente desde los métodos internos `ingresar()` y `entregar()`.
