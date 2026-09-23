@@ -35,7 +35,7 @@ class Vehiculo:
         # Retorna el valor guardado en el atributo privado __anio
         return self.__anio
 
-    # El decorador @property transforma este método en una propiedad de lectura (getter) para en_taller
+    # El decorador @property define una propiedad de SOLO LECTURA para en_taller (sin setter asociado)
     @property
     def en_taller(self) -> bool:
         # Retorna el valor guardado en el atributo privado __en_taller
@@ -43,12 +43,12 @@ class Vehiculo:
 
     # Método público para registrar el ingreso del vehículo al taller
     def ingresar(self) -> None:
-        # Cambia el estado del atributo privado __en_taller a True
+        # Modifica directamente el atributo privado __en_taller a True dentro de la clase
         self.__en_taller = True
 
     # Método público para registrar la entrega del vehículo saliendo del taller
     def entregar(self) -> None:
-        # Cambia el estado del atributo privado __en_taller a False
+        # Modifica directamente el atributo privado __en_taller a False dentro de la clase
         self.__en_taller = False
 
     # Método que retorna el valor de la tarifa por hora de reparación básica
