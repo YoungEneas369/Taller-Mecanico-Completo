@@ -70,3 +70,9 @@ Guía paso a paso del desarrollo del proyecto para el módulo **Programación Or
 - Creación de dos instancias independientes: `v1` (`'KXPR84'`, `2019`) y `v2` (`'JKLM12'`, `2016`).
 - Llamada a `v1.ingresar()` únicamente en `v1`.
 - Verificación mediante impresiones que `v1.en_taller` cambia a `True`, mientras que `v2.en_taller` se mantiene en `False`.
+
+---
+
+### Paso 11: Método `tarifa_hora()` en la Clase `Vehiculo`
+- Implementación del método `tarifa_hora()` en `Vehiculo` que retorna el entero `5000` (valor fijo de la tarifa por hora de reparación).
+- Prueba del método en `main.py` imprimiendo la tarifa por hora.

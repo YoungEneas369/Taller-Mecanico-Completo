@@ -20,13 +20,14 @@ A continuación se detalla la secuencia evolutiva de desarrollo del software, do
 | `cbddcef` | `feat: privatizar atributos con __ y agregar getters obtener_patente, obtener_anio, esta_en_taller` | `vehiculo.py`, `main.py` | Encapsulamiento con atributos privados (`__patente`, `__anio`, `__en_taller`) y métodos getters tradicionales. |
 | `790fdc6` | `refactor: reemplazar getters tradicionales por decoradores @property en Vehiculo` | `vehiculo.py`, `main.py` | Implementación del estilo pythonico usando decoradores `@property` (`patente`, `anio`, `en_taller`). |
 | `c099d9d` | `test: instanciar v1 y v2 en main.py probando independencia de estados` | `main.py` | Prueba con dos vehículos (`v1` y `v2`) verificando la independencia del estado `en_taller`. |
-| `38a10bc` | `docs: agregar bitacora de commits al README.md y paso_a_paso.md` | `README.md`, `paso_a_paso.md` | Documentación final de la bitácora de commits y guía paso a paso. |
+| `d930fff` | `feat: agregar método tarifa_hora() en Vehiculo retornando 5000` | `vehiculo.py`, `main.py` | Método `tarifa_hora()` en `Vehiculo` retornando el número entero `5000` (tarifa por hora). |
+| `a482f1b` | `docs: actualizar bitacora de commits con la tarifa_hora() y paso_a_paso.md` | `README.md`, `paso_a_paso.md` | Actualización de la bitácora de commits y del documento explicativo. |
 
 ---
 
 ## Estructura del Código Actual
 
-- [`vehiculo.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/vehiculo.py): Clase `Vehiculo` encapsulada con `@property` y métodos `ingresar()` / `entregar()`.
+- [`vehiculo.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/vehiculo.py): Clase `Vehiculo` encapsulada con `@property`, métodos `ingresar()`, `entregar()` y `tarifa_hora()`.
 - [`linea_detalle.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/linea_detalle.py): Clase `LineaDetalle` con constructor y cálculo de `subtotal()`.
 - [`main.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/main.py): Punto de entrada para pruebas con múltiples instancias de vehículos.
 - [`paso_a_paso.md`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/paso_a_paso.md): Explicación pedagógica del avance del desarrollo.
