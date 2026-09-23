@@ -23,16 +23,17 @@ A continuación se detalla la secuencia evolutiva de desarrollo del software, do
 | `d930fff` | `feat: agregar método tarifa_hora() en Vehiculo retornando 5000` | `vehiculo.py`, `main.py` | Método `tarifa_hora()` en `Vehiculo` retornando el número entero `5000` (tarifa por hora). |
 | `e1b48bc` | `feat: crear subclases Auto, Moto y Camion heredando de Vehiculo y actualizar main.py` | `auto.py`, `moto.py`, `camion.py`, `main.py` | Creación de subclases `Auto`, `Moto` y `Camion` heredando de `Vehiculo` y actualización de `main.py`. |
 | `7aef6ee` | `feat: agregar constructor con super().__init__, atributo privado __capacidad_carga y getter en Camion` | `camion.py`, `main.py` | Constructor propio en `Camion` con `super().__init__()`, atributo privado `__capacidad_carga` y su getter `@property`. |
-| `56b21df` | `docs: actualizar bitacora de commits con capacidad_carga de Camion y paso_a_paso.md` | `README.md`, `paso_a_paso.md` | Actualización de la bitácora de commits y del documento explicativo. |
+| `8625af5` | `feat: sobrescribir tarifa_hora() en Auto (25000), Moto (15000) y Camion (40000)` | `auto.py`, `moto.py`, `camion.py` | Polimorfismo: sobrescritura de `tarifa_hora()` retornando `25000` (Auto), `15000` (Moto) y `40000` (Camion). |
+| `3880629` | `docs: actualizar bitacora de commits con polimorfismo de tarifa_hora() y paso_a_paso.md` | `README.md`, `paso_a_paso.md` | Actualización de la bitácora de commits y del documento explicativo. |
 
 ---
 
 ## Estructura del Código Actual
 
-- [`vehiculo.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/vehiculo.py): Clase base `Vehiculo`.
-- [`auto.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/auto.py): Subclase `Auto` que hereda de `Vehiculo`.
-- [`moto.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/moto.py): Subclase `Moto` que hereda de `Vehiculo`.
-- [`camion.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/camion.py): Subclase `Camion` que hereda de `Vehiculo` y posee `capacidad_carga`.
+- [`vehiculo.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/vehiculo.py): Clase base `Vehiculo` (`tarifa_hora` base = `5000`).
+- [`auto.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/auto.py): Subclase `Auto` (`tarifa_hora` sobrescrita = `25000`).
+- [`moto.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/moto.py): Subclase `Moto` (`tarifa_hora` sobrescrita = `15000`).
+- [`camion.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/camion.py): Subclase `Camion` (`tarifa_hora` sobrescrita = `40000`, `capacidad_carga`).
 - [`linea_detalle.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/linea_detalle.py): Clase `LineaDetalle`.
 - [`main.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/main.py): Punto de entrada instanciando subclases `Auto`, `Moto` y `Camion`.
 - [`paso_a_paso.md`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/paso_a_paso.md): Guía paso a paso del proyecto.

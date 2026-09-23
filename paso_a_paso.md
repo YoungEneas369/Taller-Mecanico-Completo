@@ -87,6 +87,13 @@ Guía paso a paso del desarrollo del proyecto para el módulo **Programación Or
 ### Paso 13: Constructor Propio y Atributo Privado `capacidad_carga` en `Camion`
 - Creación del constructor propio `__init__(self, patente, anio, capacidad_carga)` en `Camion`.
 - Invocación al constructor de la superclase mediante `super().__init__(patente, anio)`.
-- Asignación del atributo privado `__capacidad_carga`.
-- Creación de la propiedad getter `@property capacidad_carga`.
-- Modificación de `main.py` probando la instanciación de `Camion` con 3 argumentos.
+- Asignación del atributo privado `__capacidad_carga` y su propiedad getter `@property capacidad_carga`.
+
+---
+
+### Paso 14: Polimorfismo - Sobrescritura del Método `tarifa_hora()`
+- Sobrescritura del método `tarifa_hora()` en las subclases derivadas sin modificar la clase base `Vehiculo` (`5000`):
+  - `Auto`: retorna `25000`
+  - `Moto`: retorna `15000`
+  - `Camion`: retorna `40000`
+- Comentarios explicativos por cada línea de código.
