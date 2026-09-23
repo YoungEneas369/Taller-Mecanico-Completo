@@ -74,5 +74,11 @@ Guía paso a paso del desarrollo del proyecto para el módulo **Programación Or
 ---
 
 ### Paso 11: Método `tarifa_hora()` en la Clase `Vehiculo`
-- Implementación del método `tarifa_hora()` en `Vehiculo` que retorna el entero `5000` (valor fijo de la tarifa por hora de reparación).
-- Prueba del método en `main.py` imprimiendo la tarifa por hora.
+- Implementación del método `tarifa_hora()` en `Vehiculo` que retorna el entero `5000`.
+
+---
+
+### Paso 12: Herencia - Subclases `Auto`, `Moto` y `Camion`
+- Creación de los módulos `auto.py`, `moto.py` y `camion.py`.
+- Definición de las subclases `Auto`, `Moto` y `Camion` heredando de `Vehiculo` (`class NombreClase(Vehiculo): pass`).
+- Actualización de `main.py` importando e instanciando las tres subclases para comprobar la herencia.

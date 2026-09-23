@@ -21,13 +21,17 @@ A continuación se detalla la secuencia evolutiva de desarrollo del software, do
 | `790fdc6` | `refactor: reemplazar getters tradicionales por decoradores @property en Vehiculo` | `vehiculo.py`, `main.py` | Implementación del estilo pythonico usando decoradores `@property` (`patente`, `anio`, `en_taller`). |
 | `c099d9d` | `test: instanciar v1 y v2 en main.py probando independencia de estados` | `main.py` | Prueba con dos vehículos (`v1` y `v2`) verificando la independencia del estado `en_taller`. |
 | `d930fff` | `feat: agregar método tarifa_hora() en Vehiculo retornando 5000` | `vehiculo.py`, `main.py` | Método `tarifa_hora()` en `Vehiculo` retornando el número entero `5000` (tarifa por hora). |
-| `a482f1b` | `docs: actualizar bitacora de commits con la tarifa_hora() y paso_a_paso.md` | `README.md`, `paso_a_paso.md` | Actualización de la bitácora de commits y del documento explicativo. |
+| `e1b48bc` | `feat: crear subclases Auto, Moto y Camion heredando de Vehiculo y actualizar main.py` | `auto.py`, `moto.py`, `camion.py`, `main.py` | Creación de subclases `Auto`, `Moto` y `Camion` heredando de `Vehiculo` y actualización de `main.py`. |
+| `4b712c9` | `docs: actualizar bitacora de commits con las subclases y paso_a_paso.md` | `README.md`, `paso_a_paso.md` | Actualización de la bitácora de commits y de la guía histórica paso a paso. |
 
 ---
 
 ## Estructura del Código Actual
 
-- [`vehiculo.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/vehiculo.py): Clase `Vehiculo` encapsulada con `@property`, métodos `ingresar()`, `entregar()` y `tarifa_hora()`.
-- [`linea_detalle.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/linea_detalle.py): Clase `LineaDetalle` con constructor y cálculo de `subtotal()`.
-- [`main.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/main.py): Punto de entrada para pruebas con múltiples instancias de vehículos.
-- [`paso_a_paso.md`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/paso_a_paso.md): Explicación pedagógica del avance del desarrollo.
+- [`vehiculo.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/vehiculo.py): Clase base `Vehiculo`.
+- [`auto.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/auto.py): Subclase `Auto` que hereda de `Vehiculo`.
+- [`moto.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/moto.py): Subclase `Moto` que hereda de `Vehiculo`.
+- [`camion.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/camion.py): Subclase `Camion` que hereda de `Vehiculo`.
+- [`linea_detalle.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/linea_detalle.py): Clase `LineaDetalle`.
+- [`main.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/main.py): Punto de entrada instanciando subclases `Auto`, `Moto` y `Camion`.
+- [`paso_a_paso.md`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/paso_a_paso.md): Guía paso a paso del proyecto.
