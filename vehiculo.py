@@ -15,3 +15,13 @@ class Vehiculo:
         self.anio = anio
         # Establece _en_taller por defecto en False, indicando que el vehículo no inicia en el taller
         self._en_taller = False
+
+    # Método para registrar el ingreso del vehículo al taller
+    def ingresar(self) -> None:
+        # Cambia el estado del atributo _en_taller a True (verdadero)
+        self._en_taller = True
+
+    # Método para registrar la entrega del vehículo saliendo del taller
+    def entregar(self) -> None:
+        # Cambia el estado del atributo _en_taller a False (falso)
+        self._en_taller = False
