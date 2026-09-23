@@ -9,18 +9,24 @@ class Vehiculo:
         # Atributo privado para controlar el estado del vehículo en el taller (con doble guion bajo)
         self.__en_taller = False
 
-    # Método público getter para obtener la patente del vehículo
-    def obtener_patente(self) -> str:
+    # El decorador @property transforma este método en una propiedad de lectura (getter).
+    # Permite acceder al valor de self.__patente como si fuera un atributo público (objeto.patente) sin usar paréntesis ().
+    @property
+    def patente(self) -> str:
         # Retorna el valor guardado en el atributo privado __patente
         return self.__patente
 
-    # Método público getter para obtener el año del vehículo
-    def obtener_anio(self) -> int:
+    # El decorador @property transforma este método en una propiedad de lectura (getter).
+    # Permite acceder al valor de self.__anio como un atributo público (objeto.anio) manteniendo el atributo protegido/privado.
+    @property
+    def anio(self) -> int:
         # Retorna el valor guardado en el atributo privado __anio
         return self.__anio
 
-    # Método público getter para verificar si el vehículo está en el taller
-    def esta_en_taller(self) -> bool:
+    # El decorador @property transforma este método en una propiedad de lectura (getter).
+    # Permite consultar si está en taller con sintaxis de atributo (objeto.en_taller) ejecutando este método internamente.
+    @property
+    def en_taller(self) -> bool:
         # Retorna el valor guardado en el atributo privado __en_taller
         return self.__en_taller
 
