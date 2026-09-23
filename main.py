@@ -1,22 +1,20 @@
 # Importación de la clase Vehiculo desde el módulo vehiculo.py
 from vehiculo import Vehiculo
 
-# Creación de una instancia de Vehiculo con patente 'KXPR84' y año 2019
-mi_vehiculo = Vehiculo('KXPR84', 2019)
+# Instanciación del primer vehículo v1 con patente 'KXPR84' y año 2019
+v1 = Vehiculo('KXPR84', 2019)
+# Instanciación del segundo vehículo v2 con patente 'JKLM12' y año 2016
+v2 = Vehiculo('JKLM12', 2016)
 
-# Muestra la patente accediendo a la propiedad @property patente sin usar paréntesis ()
-print(f"Patente: {mi_vehiculo.patente}")
-# Muestra el año accediendo a la propiedad @property anio sin usar paréntesis ()
-print(f"Año: {mi_vehiculo.anio}")
-# Muestra el estado inicial accediendo a la propiedad @property en_taller sin usar paréntesis ()
-print(f"Estado inicial ¿está en el taller?: {mi_vehiculo.en_taller}")
+# Registra la entrada al taller únicamente para el vehículo v1
+v1.ingresar()
 
-# Ejecuta el método ingresar() para cambiar el estado del vehículo a dentro del taller
-mi_vehiculo.ingresar()
-# Muestra el estado tras ingresar accediendo a la propiedad @property en_taller
-print(f"Estado tras llamar a ingresar() ¿está en el taller?: {mi_vehiculo.en_taller}")
+# Imprime la patente del primer vehículo v1 mediante la propiedad @property patente
+print(f"Vehículo 1 - Patente: {v1.patente}")
+# Imprime si v1 está en el taller mediante la propiedad @property en_taller (debe ser True)
+print(f"Vehículo 1 - ¿Está en el taller?: {v1.en_taller}")
 
-# Ejecuta el método entregar() para cambiar el estado del vehículo a fuera del taller
-mi_vehiculo.entregar()
-# Muestra el estado tras entregar accediendo a la propiedad @property en_taller
-print(f"Estado tras llamar a entregar() ¿está en el taller?: {mi_vehiculo.en_taller}")
+# Imprime la patente del segundo vehículo v2 mediante la propiedad @property patente
+print(f"Vehículo 2 - Patente: {v2.patente}")
+# Imprime si v2 está en el taller mediante la propiedad @property en_taller (debe ser False)
+print(f"Vehículo 2 - ¿Está en el taller?: {v2.en_taller}")
