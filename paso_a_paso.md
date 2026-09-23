@@ -96,4 +96,13 @@ Guía paso a paso del desarrollo del proyecto para el módulo **Programación Or
   - `Auto`: retorna `25000`
   - `Moto`: retorna `15000`
   - `Camion`: retorna `40000`
-- Comentarios explicativos por cada línea de código.
+
+---
+
+### Paso 15: Validación de Datos con `@patente.setter` en `Vehiculo`
+- Implementación del decorador de escritura `@patente.setter` en `Vehiculo`.
+- Validación de datos requerida:
+  - Verificar que el largo de la patente sea de al menos 6 caracteres (`len(valor) < 6`).
+  - Verificar que el texto de la patente no contenga espacios en blanco (`' ' in valor`).
+  - Lanzar excepción `ValueError` si alguna validación falla.
+- Asignación en el constructor `__init__` a través de `self.patente = patente` para invocar la validación al instanciar.
