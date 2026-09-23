@@ -25,18 +25,18 @@ A continuación se detalla la secuencia evolutiva de desarrollo del software, do
 | `7aef6ee` | `feat: agregar constructor con super().__init__, atributo privado __capacidad_carga y getter en Camion` | `camion.py`, `main.py` | Constructor propio en `Camion` con `super().__init__()`, atributo privado `__capacidad_carga` y su getter `@property`. |
 | `8625af5` | `feat: sobrescribir tarifa_hora() en Auto (25000), Moto (15000) y Camion (40000)` | `auto.py`, `moto.py`, `camion.py` | Polimorfismo: sobrescritura de `tarifa_hora()` retornando `25000` (Auto), `15000` (Moto) y `40000` (Camion). |
 | `7a3c0b1` | `feat: agregar @patente.setter con validacion de longitud y espacios en Vehiculo` | `vehiculo.py` | Validación segura de la patente mediante `@patente.setter` lanzando `ValueError` y asignación en constructor. |
-| `1432b75` | `test: probar la validacion de patente invalida en main.py sin excepciones` | `main.py` | Prueba de instanciación con patente inválida ('ABC') en `main.py` para demostrar la validación en ejecución. |
-| `f5e9166` | `feat: definir en_taller como property de solo lectura sin setter en Vehiculo` | `vehiculo.py` | Propiedad `@property en_taller` de solo lectura sin setter; mutación exclusiva mediante `ingresar()` y `entregar()`. |
-| `12b90ce` | `docs: actualizar bitacora de commits con la propiedad en_taller de solo lectura y paso_a_paso.md` | `README.md`, `paso_a_paso.md` | Actualización de la bitácora de commits y del documento explicativo. |
+| `f5e9166` | `feat: definir en_taller como property de solo lectura sin setter en Vehiculo` | `vehiculo.py` | Propiedad `@property en_taller` de solo lectura sin setter. |
+| `d3964bc` | `feat: agregar validaciones en ingresar() y entregar() para prevenir estados inconsistentes` | `vehiculo.py`, `main.py` | Validaciones en `ingresar()` y `entregar()` impidiendo reingresos o entregas no registradas. |
+| `b572a1e` | `docs: actualizar bitacora de commits con validaciones de ingresar y entregar y paso_a_paso.md` | `README.md`, `paso_a_paso.md` | Actualización de la bitácora de commits y del documento explicativo. |
 
 ---
 
 ## Estructura del Código Actual
 
-- [`vehiculo.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/vehiculo.py): Clase base `Vehiculo` con propiedades `@patente.setter` y `@property en_taller` (solo lectura).
+- [`vehiculo.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/vehiculo.py): Clase base `Vehiculo` con `@patente.setter`, `@property en_taller` (solo lectura) y validaciones en `ingresar()` / `entregar()`.
 - [`auto.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/auto.py): Subclase `Auto` (`tarifa_hora` = `25000`).
 - [`moto.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/moto.py): Subclase `Moto` (`tarifa_hora` = `15000`).
 - [`camion.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/camion.py): Subclase `Camion` (`tarifa_hora` = `40000`, `capacidad_carga`).
 - [`linea_detalle.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/linea_detalle.py): Clase `LineaDetalle`.
-- [`main.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/main.py): Punto de entrada con prueba de validación directa.
+- [`main.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/main.py): Punto de entrada probando las operaciones y validaciones de estado.
 - [`paso_a_paso.md`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/paso_a_paso.md): Guía paso a paso del proyecto.
