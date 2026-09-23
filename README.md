@@ -25,7 +25,8 @@ A continuación se detalla la secuencia evolutiva de desarrollo del software, do
 | `7aef6ee` | `feat: agregar constructor con super().__init__, atributo privado __capacidad_carga y getter en Camion` | `camion.py`, `main.py` | Constructor propio en `Camion` con `super().__init__()`, atributo privado `__capacidad_carga` y su getter `@property`. |
 | `8625af5` | `feat: sobrescribir tarifa_hora() en Auto (25000), Moto (15000) y Camion (40000)` | `auto.py`, `moto.py`, `camion.py` | Polimorfismo: sobrescritura de `tarifa_hora()` retornando `25000` (Auto), `15000` (Moto) y `40000` (Camion). |
 | `7a3c0b1` | `feat: agregar @patente.setter con validacion de longitud y espacios en Vehiculo` | `vehiculo.py` | Validación segura de la patente mediante `@patente.setter` lanzando `ValueError` y asignación en constructor. |
-| `0e41b2c` | `docs: actualizar bitacora de commits con @patente.setter y paso_a_paso.md` | `README.md`, `paso_a_paso.md` | Actualización de la bitácora de commits y del documento explicativo. |
+| `1432b75` | `test: probar la validacion de patente invalida en main.py sin excepciones` | `main.py` | Prueba de instanciación con patente inválida ('ABC') en `main.py` para demostrar la validación en ejecución. |
+| `45f91ab` | `docs: actualizar bitacora de commits con la prueba de validacion y paso_a_paso.md` | `README.md`, `paso_a_paso.md` | Actualización de la bitácora de commits y del documento explicativo. |
 
 ---
 
@@ -36,5 +37,5 @@ A continuación se detalla la secuencia evolutiva de desarrollo del software, do
 - [`moto.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/moto.py): Subclase `Moto` (`tarifa_hora` = `15000`).
 - [`camion.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/camion.py): Subclase `Camion` (`tarifa_hora` = `40000`, `capacidad_carga`).
 - [`linea_detalle.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/linea_detalle.py): Clase `LineaDetalle`.
-- [`main.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/main.py): Punto de entrada instanciando subclases `Auto`, `Moto` y `Camion`.
+- [`main.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/main.py): Punto de entrada con prueba de validación directa (sin manejo de excepciones).
 - [`paso_a_paso.md`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/paso_a_paso.md): Guía paso a paso del proyecto.

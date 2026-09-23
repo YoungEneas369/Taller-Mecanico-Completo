@@ -106,3 +106,9 @@ Guía paso a paso del desarrollo del proyecto para el módulo **Programación Or
   - Verificar que el texto de la patente no contenga espacios en blanco (`' ' in valor`).
   - Lanzar excepción `ValueError` si alguna validación falla.
 - Asignación en el constructor `__init__` a través de `self.patente = patente` para invocar la validación al instanciar.
+
+---
+
+### Paso 16: Prueba de la Validación en `main.py` (sin manejo de excepciones)
+- Inserción en `main.py` de la instanciación `Auto('ABC', 2020)` con una patente de menos de 6 dígitos.
+- Verificación de la interrupción del programa en tiempo de ejecución al activarse la validación del setter.
