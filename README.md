@@ -4,6 +4,11 @@ Este repositorio contiene el desarrollo del modelo completo de un taller mecáni
 
 ---
 
+## 📘 Guía Extrapolable para Otros Modelos (Agencia de Viajes)
+Se ha generado la guía en markdown [`GUIA_AGENCIA_VIAJES.md`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/GUIA_AGENCIA_VIAJES.md) con la secuencia completa de prompts para trasladar este mismo modelo pedagógico de POO Seguro hacia el dominio de **Agencias de Viajes** (`ServicioViaje`, `Vuelo`, `Hotel`, `Excursion`).
+
+---
+
 ## Bitácora de Commits / Evolución Histórica del Proyecto
 
 A continuación se detalla la secuencia evolutiva de desarrollo del software, donde cada instrucción/prompt corresponde a un cambio y un commit independiente en el repositorio:
@@ -27,16 +32,17 @@ A continuación se detalla la secuencia evolutiva de desarrollo del software, do
 | `7a3c0b1` | `feat: agregar @patente.setter con validacion de longitud y espacios en Vehiculo` | `vehiculo.py` | Validación segura de la patente mediante `@patente.setter` lanzando `ValueError` y asignación en constructor. |
 | `f5e9166` | `feat: definir en_taller como property de solo lectura sin setter en Vehiculo` | `vehiculo.py` | Propiedad `@property en_taller` de solo lectura sin setter. |
 | `d3964bc` | `feat: agregar validaciones en ingresar() y entregar() para prevenir estados inconsistentes` | `vehiculo.py`, `main.py` | Validaciones en `ingresar()` y `entregar()` impidiendo reingresos o entregas no registradas. |
-| `b572a1e` | `docs: actualizar bitacora de commits con validaciones de ingresar y entregar y paso_a_paso.md` | `README.md`, `paso_a_paso.md` | Actualización de la bitácora de commits y del documento explicativo. |
+| `589f2a1` | `docs: agregar guia de prompts para modelo Agencia de Viajes y actualizar README.md` | `README.md`, `GUIA_AGENCIA_VIAJES.md` | Inclusión de la guía extrapolable para agencias de viajes y actualización final del README.md. |
 
 ---
 
 ## Estructura del Código Actual
 
-- [`vehiculo.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/vehiculo.py): Clase base `Vehiculo` con `@patente.setter`, `@property en_taller` (solo lectura) y validaciones en `ingresar()` / `entregar()`.
-- [`auto.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/auto.py): Subclase `Auto` (`tarifa_hora` = `25000`).
-- [`moto.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/moto.py): Subclase `Moto` (`tarifa_hora` = `15000`).
-- [`camion.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/camion.py): Subclase `Camion` (`tarifa_hora` = `40000`, `capacidad_carga`).
+- [`vehiculo.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/vehiculo.py): Clase base `Vehiculo`.
+- [`auto.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/auto.py): Subclase `Auto`.
+- [`moto.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/moto.py): Subclase `Moto`.
+- [`camion.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/camion.py): Subclase `Camion`.
 - [`linea_detalle.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/linea_detalle.py): Clase `LineaDetalle`.
-- [`main.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/main.py): Punto de entrada probando las operaciones y validaciones de estado.
-- [`paso_a_paso.md`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/paso_a_paso.md): Guía paso a paso del proyecto.
+- [`main.py`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/main.py): Punto de entrada con prueba de operaciones y validaciones.
+- [`paso_a_paso.md`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/paso_a_paso.md): Guía paso a paso del proyecto del taller.
+- [`GUIA_AGENCIA_VIAJES.md`](file:///C:/Users/figue/Documents/Taller-Mecanico-Completo/GUIA_AGENCIA_VIAJES.md): Guía extrapolable de prompts para Agencias de Viajes.
