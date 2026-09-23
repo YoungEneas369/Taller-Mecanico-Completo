@@ -23,3 +23,7 @@ print(f"Moto 2 - Patente: {v2.patente}, ¿En taller?: {v2.en_taller}, Tarifa hor
 
 # Imprime la información del Camión v3 incluyendo la propiedad capacidad_carga propia
 print(f"Camión 3 - Patente: {v3.patente}, Capacidad Carga: {v3.capacidad_carga} kg, Tarifa hora: ${v3.tarifa_hora()}")
+
+# Intento de creación de un vehículo con patente inválida (menos de 6 caracteres) para probar la validación
+# Nota: Esta línea detendrá la ejecución por la validación en @patente.setter (sin usar manejo de excepciones)
+auto_invalido = Auto('ABC', 2020)
