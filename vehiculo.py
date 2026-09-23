@@ -1,4 +1,6 @@
 # Esta clase representa la base para los vehículos del taller.
-# Por ahora es solo el molde básico sin atributos ni métodos definidos.
+# Por ahora es solo el molde básico con la declaración de sus atributos (sin constructor).
 class Vehiculo:
-    pass
+    patente: str
+    anio: int
+    _en_taller: bool
